@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title> SkyCompass </title>
+  <link rel="icon" type="image/x-icon" href="/media/weather.ico">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body bgcolor="0F0F0F">
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo"> SkyCompass </a>
+      <ul class="nav-menu">
+
+        <li>
+          <button id="darkMode-Button">
+            <img src="media/sun.png" alt="darkMode-icon" class="darkMode-icon">
+          </button>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"> <span> Home </span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="forecast.html"> <span> Forecast </span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="weatherMap.html"> <span> Dashboard </span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"> <img class="login-icon" src="media/login.png"> </a>
+        </li>
+
+      </ul>
+
+      <div class="hamburger">
+
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="image-container">
+    <img src="media/rain-map.png" alt="Background Image" class="picture">
+    <!-- <img src="media/weather.ico" alt="front-logo" class="front-logo"> -->
+  </div>
+
+  <div class="main-content">
+    <h1> Forecast </h1>
+
+    <br>
+    <h3> Search a location below in order to get an up-to-date forcast where you are,<br>
+      or head on over to the Dashboard page to see a realtime weather map of your area. </h3>
+
+    <br>
+    <p1>Note: Weather Forecast feature updates every 15 minutes. </p1>
+
+  </div>
+
+  <div class="search-container">
+
+    <div class="search-bar">
+      <br>
+      <h1> Choose a location: </h1>
+      <br>
+      <input type="text" id="search-input" placeholder="Search..">
+      <button type="submit" id="search-button">Search</button>
+
+    </div>
+
+    <div class="LatLon">
+
+      <h2> Searched Location: </h2>
+
+      <div class="location">
+        <div id="locationText"> </div>
+      </div>
+
+      <div class="lat">
+        <div id="latText"> </div>
+      </div>
+      <div class="lon">
+        <div id="lonText"> </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="forecast-cards">
+
+    <div class="hr-fifteen-container">
+
+      <div class="fithteen-min-forcast">
+
+        <div class="forcast-title">
+          <h2> Current weather forecast </h2>
+          <br>
+        </div>
+
+        <div class="data-container">
+
+          <div class="weather-card" id="temperature">
+            <img src="media/celsius.png"> </img>
+            <br> <br>
+            <span id="tempText"> </span>
+            <br> <br>
+          </div>
+
+          <div class="weather-card" id="feels-like">
+            <img src="media/celsius.png"> </img>
+            <br> <br>
+            <span id="feelslikeText"> </span>
+            <br> <br>
+          </div>
+
+          <div class="weather-card" id="wind-speed">
+            <img src="media/wind.png"> </img>
+            <br> <br>
+            <span id="windSpeedText"> </span>
+            <br> <br>
+          </div>
+
+          <div class="weather-card" id="wind-direction">
+            <img src="media/wind.png"> </img>
+            <br> <br>
+            <span id="windDirectionText"> </span>
+            <br> <br>
+          </div>
+
+          <div class="weather-card" id="cloud-cover">
+            <img src="media/cloud.png"> </img>
+            <br> <br>
+            <span id="cloudCoverText"> </span>
+            <br> <br>
+          </div>
+
+          <div class="weather-card" id="precipitation">
+            <img src="media/raining.png"> </img>
+            <br> <br>
+            <span id="precipText"> </span>
+            <br> <br>
+          </div>
+
+        </div>
+
+        <div class="time-card" id="time">
+          <br> <br>
+          <span id="timeText"> </span>
+          <br> <br>
+        </div>
+
+      </div>
+
+      <div class="hr-forecast">
+
+        <div class="forcast-title">
+          <h2> Daily Forecast </h2>
+          <br>
+          <p1> </p1>
+        </div>
+
+        <div class="data-container">
+
+          <div class="weather-card-3h">
+            <br>
+            <span id="timeText0h"> </span>
+            <br>
+            <span id="tempText0h"> </span>
+            <br>
+            <span id="feelslikeText0h"> </span>
+            <br>
+            <span id="precipText0h"> </span>
+            <br>
+            <span id="windSpeedText0h"> </span>
+            <br>
+            <span id="windDirectionText0h"> </span>
+            <br>
+            <span id="cloudCoverText0h"> </span>
+            <br>
+          </div>
+
+          <div class="weather-card-3h">
+
+            <br>
+            <span id="timeText1h"> </span>
+            <br>
+            <span id="tempText1h"> </span>
+            <br>
+            <span id="feelslikeText1h"> </span>
+            <br>
+            <span id="precipText1h"> </span>
+            <br>
+            <span id="windSpeedText1h"> </span>
+            <br>
+            <span id="windDirectionText1h"> </span>
+            <br>
+            <span id="cloudCoverText1h"> </span>
+            <br>
+
+          </div>
+
+          <div class="weather-card-3h">
+
+            <br>
+            <span id="timeText2h"> </span>
+            <br>
+            <span id="tempText2h"> </span>
+            <br>
+            <span id="feelslikeText2h"> </span>
+            <br>
+            <span id="precipText2h"> </span>
+            <br>
+            <span id="windSpeedText2h"> </span>
+            <br>
+            <span id="windDirectionText2h"> </span>
+            <br>
+            <span id="cloudCoverText2h"> </span>
+            <br>
+
+          </div>
+
+          <div class="weather-card-3h">
+            <br>
+            <span id="timeText3h"> </span>
+            <br>
+
+            <span id="tempText3h"> </span>
+            <br>
+            <span id="feelslikeText3h"> </span>
+            <br>
+            <span id="precipText3h"> </span>
+            <br>
+            <span id="windSpeedText3h"> </span>
+            <br>
+            <span id="windDirectionText3h"> </span>
+            <br>
+            <span id="cloudCoverText3h"> </span>
+            <br>
+
+          </div>
+
+          <div class="weather-card-3h">
+           
+            <br>
+            <span id="timeText4h"> </span>
+            <br>
+            <span id="tempText4h"> </span>
+            <br>
+            <span id="feelslikeText4h"> </span>
+            <br>
+            <span id="precipText4h"> </span>
+            <br>
+            <span id="windSpeedText4h"> </span>
+            <br>
+            <span id="windDirectionText4h"> </span>
+            <br>
+            <span id="cloudCoverText4h"> </span>
+            <br>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="forecast-cards-seven">
+    <div class="seven-day-forcast">
+
+      <div class="forcast-title">
+        <h2> Weather for the next 7 days </h2>
+      </div>
+
+      <div class="data-container">
+
+        <div class="weather-card-seven" id="monday">
+          <br>
+          <h2 id="dayNameText0">  </h2>
+          <br> 
+          <div class="weather-grid">
+
+            <div class="weather-item">
+              <img src="media/celsius.png" alt="description" class="weather-icon">
+              <span id="tempMaxText0"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/raining.png" alt="description" class="weather-icon">
+              <span id="precipMaxText0"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/sun.png" alt="description" class="weather-icon">
+              <span id="daylightDurationText0"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/wind.png" alt="description" class="weather-icon">
+              <span id="windSpeedMaxText0"> </span>
+            </div>
+
+          </div>
+          <br> <br>
+        </div>
+
+        <div class="weather-card-seven" id="tuesday">
+          <br>
+          <h2 id="dayNameText1">  </h2>
+          <br> 
+          <div class="weather-grid">
+
+            <div class="weather-item">
+              <img src="media/celsius.png" alt="description" class="weather-icon">
+              <span id="tempMaxText1"> </span>
+            </div>
+
+
+            <div class="weather-item">
+              <img src="media/raining.png" alt="description" class="weather-icon">
+              <span id="precipMaxText1"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/sun.png" alt="description" class="weather-icon">
+              <span id="daylightDurationText1"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/wind.png" alt="description" class="weather-icon">
+              <span id="windSpeedMaxText1"> </span>
+            </div>
+
+          </div>
+          <br> <br>
+        </div>
+
+        <div class="weather-card-seven" id="wednesday">
+          <br>
+          <h2 id="dayNameText2">  </h2>
+          <br> 
+          <div class="weather-grid">
+
+            <div class="weather-item">
+              <img src="media/celsius.png" alt="description" class="weather-icon">
+              <span id="tempMaxText2"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/raining.png" alt="description" class="weather-icon">
+              <span id="precipMaxText2"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/sun.png" alt="description" class="weather-icon">
+              <span id="daylightDurationText2"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/wind.png" alt="description" class="weather-icon">
+              <span id="windSpeedMaxText2"> </span>
+            </div>
+
+          </div>
+          <br> <br>
+        </div>
+
+        <div class="weather-card-seven" id="thursday">
+          <br>
+          <h2 id="dayNameText3">  </h2>
+          <br>
+          <div class="weather-grid">
+
+            <div class="weather-item">
+              <img src="media/celsius.png" alt="description" class="weather-icon">
+              <span id="tempMaxText3"> </span>
+            </div>
+
+
+            <div class="weather-item">
+              <img src="media/raining.png" alt="description" class="weather-icon">
+              <span id="precipMaxText3"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/sun.png" alt="description" class="weather-icon">
+              <span id="daylightDurationText3"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/wind.png" alt="description" class="weather-icon">
+              <span id="windSpeedMaxText3"> </span>
+            </div>
+
+          </div>
+          <br> <br>
+        </div>
+
+        <div class="weather-card-seven" id="friday">
+          <br>
+          <h2 id="dayNameText4">  </h2>
+          <br> 
+          <div class="weather-grid">
+
+            <div class="weather-item">
+              <img src="media/celsius.png" alt="description" class="weather-icon">
+              <span id="tempMaxText4"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/raining.png" alt="description" class="weather-icon">
+              <span id="precipMaxText4"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/sun.png" alt="description" class="weather-icon">
+              <span id="daylightDurationText4"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/wind.png" alt="description" class="weather-icon">
+              <span id="windSpeedMaxText4"> </span>
+            </div>
+
+          </div>
+          <br> <br>
+        </div>
+
+        <div class="weather-card-seven" id="saturday">
+          <br>
+          <h2 id="dayNameText5">  </h2>
+          <br> 
+          <div class="weather-grid">
+
+            <div class="weather-item">
+              <img src="media/celsius.png" alt="description" class="weather-icon">
+              <span id="tempMaxText5"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/raining.png" alt="description" class="weather-icon">
+              <span id="precipMaxText5"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/sun.png" alt="description" class="weather-icon">
+              <span id="daylightDurationText5"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/wind.png" alt="description" class="weather-icon">
+              <span id="windSpeedMaxText5"> </span>
+            </div>
+
+          </div>
+          <br> <br>
+        </div>
+
+        <div class="weather-card-seven" id="sunday">
+          <br>
+          <h2 id="dayNameText6">  </h2>
+          <br> 
+          <div class="weather-grid">
+
+            <div class="weather-item">
+              <img src="media/celsius.png" alt="description" class="weather-icon">
+              <span id="tempMaxText6"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/raining.png" alt="description" class="weather-icon">
+              <span id="precipMaxText6"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/sun.png" alt="description" class="weather-icon">
+              <span id="daylightDurationText6"> </span>
+            </div>
+
+            <div class="weather-item">
+              <img src="media/wind.png" alt="description" class="weather-icon">
+              <span id="windSpeedMaxText6"> </span>
+            </div>
+
+          </div>
+          <br> <br>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    
+    <div class="footer-a">
+      <h4> SkyCompass 2024 - Site developed by Daniel Steele
+        <br> <br>
+        As my final project for the University of Plymouth </h4>
+      <br>
+      <p1> | Weather Maps provided by OpenWeatherMaps API | </p1>
+      <p1>  Weather Data Providded by OpenMeteo's API | </p1>
+    </div>
+    <div class="footer-b">
+    <a href="Credit.html">
+      <h3> Icon Credit </h3>
+    </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="forecast.js"></script>
+  <script src="weatherAPI.js"></script>
+</body>
+
+</html>

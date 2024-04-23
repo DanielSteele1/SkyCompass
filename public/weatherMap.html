@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> SkyCompass </title>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Jquery Link-->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"> </script>
+
+  <link rel="icon" type="image/x-icon" href="/media/weather.ico">
+
+</head>
+
+<body bgcolor="0F0F0F">
+
+  <header>
+    <nav class="navbar">
+
+      <a href="index.html" class="logo"> SkyCompass </a>
+      <ul class="nav-menu">
+
+        <li>
+          <button id="darkMode-Button">
+            <img src="media/sun.png" alt="darkMode-icon" class="darkMode-icon">
+          </button>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <p1> Home </p1>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="forecast.html">
+            <p1> Forecast </p1>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="weatherMap.html">
+            <p1> Dashboard </p1>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"> <img class="login-icon" src="media/login.png"> </a>
+        </li>
+
+      </ul>
+
+      <div class="hamburger">
+
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="main-content">
+
+    <h1> Interactive Weather Maps </h1>
+    <br>
+    <h3> View the dashboard below to see current weather patterns. </h3>
+    <h3>To view specific data on the map, see the dashboard menu on the left. </h3>
+    <br>
+    <h4> Weather Data via Maps updates every 3 hours, with exception of the current temperature - This is due to
+      limitations with OpenWeatherMaps API.<br><br> For more accurate and specific data, please visit the
+      Forecast page. </h4>
+
+    <a href="forecast.html">
+      <input type="button" id="forecast-redirect" value="Check the weather in your area" placeholder="weather-redirect">
+    </a>
+  </div>
+
+  <div class="search-bar">
+    <br>
+    <h1> Choose a location: </h1>
+    <br>
+    <input type="text" id="search-input" placeholder="Search a location...">
+    <button type="submit" id="search-button">Search a City</button>
+
+  </div>
+
+  <div class="button-container">
+
+    <div class="weather-map">
+
+      <button type="submit" id="rainMap-button"> <img src="media/raining.png"> </button>
+
+      <button type="submit" id="tempMap-button"> <img src="media/celsius.png"> </button>
+
+      <button type="submit" id="windMap-button" alt="Wind Map"> <img src="media/wind.png"> </button>
+
+      <button type="submit" id="cloudMap-button" alt="Wind Map"> <img src="media/cloud.png"> </button>
+
+    </div>
+
+    <div class="dashboard-menu">
+      <button id="menu-button"> More Options </button>
+      <div id="menu">
+        <label><input id="Checkbox-Snow" type="checkbox" value="Snow"> Depth of Snow (m) </label>
+        <br>
+        <label> <input id="Checkbox-Airpressure" type="checkbox" value="AirPressure"> Air Pressure (hPa) </label>
+        <br>
+        <label> <input id="Checkbox-Day-Night" type="checkbox" value="Day/Night"> Day/Night </label>
+        <br>
+        <label> <input id="Checkbox-Cities" type="checkbox" value="Cities"> Cities </label>
+
+      </div>
+    </div>
+
+    <div id="map">
+
+    </div>
+
+    <div id="clear-button">
+      <p> Clear Map </p>
+    </div>
+
+    <div class="footer">
+
+      <div class="footer-a">
+        <h4> SkyCompass 2024 - Site developed by Daniel Steele
+          <br> <br>
+          As my final project for the University of Plymouth
+        </h4>
+        <br>
+        <p1> | Weather Maps provided by OpenWeatherMaps API | </p1>
+        <p1> Weather Data Providded by OpenMeteo's API | </p1>
+      </div>
+      <div class="footer-b">
+        <a href="Credit.html">
+          <h3> Icon Credit </h3>
+        </a>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="weatherAPI.js"></script>
+    <script type="module" src="dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> SkyCompass </title>
+  <link rel="icon" type="image/x-icon" href="/media/weather.ico">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body bgcolor="0F0F0F">
+  <header>
+    <nav class="navbar">
+
+      <a href="index.html" class="logo"> SkyCompass </a>
+
+      <ul class="nav-menu">
+
+        <li>
+          <button id="darkMode-Button">
+            <img src="media/sun.png" alt="darkMode-icon" class="darkMode-icon">
+          </button>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <p1> Home </p1>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="forecast.html">
+            <p1> Forecast </p1>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="weatherMap.html">
+            <p1> Dashboard </p1>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"> <img class="login-icon" src="media/login.png"> </a>
+        </li>
+
+      </ul>
+
+      <div class="hamburger">
+
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="image-container">
+    <img src="media/temp-map.png" alt="Background Image" class="picture">
+    <!-- <img src="media/weather.ico" alt="front-logo" class="front-logo"> -->
+  </div>
+
+  <div class="main-content">
+    <h1> What is SkyCompass? </h1>
+    <div id="content_1">
+      <h3> SkyCompass is a project that aims to provide users with a simple and easy to use interface to check the
+        weather quickly and efficiently. </h3>
+      <h3> We offer a wide range of interactive maps and tools to help track weather data across the globe. </h3>
+      <br>
+      <br>
+      <h3> To check out the weather in your area, click on the "Forecast" tab at the top of the page. </h3>
+      <h3 href="weatherMap.html"> Alternatively, head to the Dashboard page to access out weather mapping tools. </h3>
+    </div>
+  </div>
+
+  <div class="data-cards">
+
+    <div class="card0">
+      <h2 class="card-header"> Precipitation Maps </h2>
+
+      <div class="card-img">
+        <img src="media/rain-map.png" alt="Background Image" class="card-img">
+      </div>
+      <div class="card-desc">
+        <br>
+        <br>
+        <h4> Click below to check out the precipitation for your area. </h4>
+        <br>
+      </div>
+    </div>
+
+    <div class="card1">
+      <h2 class="card-header"> Temperature Maps </h2>
+
+      <div class="card-img">
+        <img src="media/temp-map.png" alt="Background Image" class="card-img">
+      </div>
+
+      <div class="card-desc">
+        <br>
+        <br>
+        <h4> Click below to view temperature maps encompassing the entire globe. </h4>
+        <br>
+        <a href="weatherMap.html">
+          <input type="button" id="weather-redirect" value="View Dashboard" placeholder="weather-redirect">
+        </a>
+      </div>
+    </div>
+
+    <div class="card2">
+      <h2 class="card-header"> Wind Speed/Direction Maps </h2>
+
+      <div class="card-img">
+        <img src="media/wind-map.jpg" alt="Background Image" class="card-img">
+      </div>
+
+      <div class="card-desc">
+        <br>
+        <br>
+        <h4> Click below to check out a worldwide wind map. </h4>
+        <br>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer">
+
+    <div class="footer-a">
+      <h4> SkyCompass 2024 - Site developed by Daniel Steele
+        <br> <br>
+        As my final project for the University of Plymouth
+      </h4>
+      <br>
+      <p1> | Weather Maps provided by OpenWeatherMaps API | </p1>
+      <p1> Weather Data Providded by OpenMeteo's API | </p1>
+    </div>
+    <div class="footer-b">
+      <a href="Credit.html">
+        <h3> Icon Credit </h3>
+      </a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

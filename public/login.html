@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title> SkyCompass </title>
+  <link rel="icon" type="image/x-icon" href="/media/weather.ico">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body bgcolor="0F0F0F">
+
+  <header>
+    <nav class="navbar">
+
+      <a href="index.html" class="logo"> SkyCompass </a>
+      <ul class="nav-menu">
+
+        <li>
+          <button id="darkMode-Button">
+            <img src="media/sun.png" alt="darkMode-icon" class="darkMode-icon">
+          </button>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <p1> Home </p1>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="forecast.html">
+            <p1> Forecast </p1>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="weatherMap.html">
+            <p1> Dashboard </p1>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"> <img class="login-icon" src="media/login.png"> </a>
+        </li>
+
+      </ul>
+
+      <div class="hamburger">
+
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="image-container">
+    <img src="media/wind-map.jpg" alt="Background Image" class="picture">
+    <!-- <img src="media/weather.ico" alt="front-logo" class="front-logo"> -->
+  </div>
+
+  <div class="main-content">
+    <h1> Create an account </h1>
+    <br>
+    <h3> Enter your details below create an account, or log in below. </h3>
+    <br>
+    <h3> Dont have an account? <br><br>  Not to worry, Create one now in order to save locations when searching and see multiple at once.</h3>
+  </div>
+
+  <div id="loginError" style="color:red;"></div>
+  <div id="loginSuccess" style="color:lightgreen;"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const error = urlParams.get('error');
+      const success = urlParams.get('success');
+      if (error) {
+        document.getElementById('loginError').textContent = error;
+      }
+
+      if (success) {
+        document.getElementById('loginSuccess').textContent = success;
+      }
+    });
+
+  </script>
+
+  <!-- Sign up portal -->
+  <div class="portal">
+    <div class="sign-up-portal">
+      <h1> Sign Up </h1>
+      <form method="post" action="/signin">
+        <br>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <br>
+        <br>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <br>
+        <input type="submit" id="sign-up-button" value="Create Account" placeholder="Create Account" required>
+      </form>
+    </div>
+
+    <!-- Login portal -->
+    <div class="login-portal">
+      <h1> Login </h1>
+      <br>
+      <form method="post" action="/login">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <br>
+        <br>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <br>
+        <input type="submit" id="login-button" value="login" placeholder="Login">
+      </form>
+    </div>
+  </div>
+
+  <button id="deleteAccount-button" style="display: none;"> Delete Account </button>
+  
+
+
+
+
+  
+  <div class="footer">
+    
+    <div class="footer-a">
+      <h4> SkyCompass 2024 - Site developed by Daniel Steele
+        <br> <br>
+        As my final project for the University of Plymouth </h4>
+      <br>
+      <p1> | Weather Maps provided by OpenWeatherMaps API | </p1>
+      <p1>  Weather Data Providded by OpenMeteo's API | </p1>
+    </div>
+    <div class="footer-b">
+    <a href="Credit.html">
+      <h3> Icon Credit </h3>
+    </a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
