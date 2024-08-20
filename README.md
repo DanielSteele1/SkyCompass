@@ -27,4 +27,4 @@ This project may also require the installation of:
 - express session
 - mongoose
 
-Link to YouTube video: https://www.youtube.com/watch?v=BnLhYjRLWo8
+<!--Link to YouTube video: https://www.youtube.com/watch?v=BnLhYjRLWo8-->
