@@ -5,13 +5,14 @@ This web-based application aims to give users an easy and convenient way to chec
 
 
 
+-------------------- FEATURES ---------------------
+
+- Weather Map dashboard - view up to date statistics such as precipitation/temperature/air pressure and cloud coverage on a live map.
+- 7 day Forecast - a forecast page that predicts weather from the next 6 hours to the next 7 days in any location chosen by the user.
+- City markers - The user can hide or show each city on the planet which displays thier repsective temperature and timezone. Users can also focus onto any location on the map.
 
 
-
-
-
-
--------------------- IN ORDER TO RUN ---------------------
+---------------- IN ORDER TO RUN ------------------
 
 To run, make sure you have node JS installed onto your environment - use the command 'npm install -g npm' in the console.
 
