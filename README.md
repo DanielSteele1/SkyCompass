@@ -16,8 +16,11 @@ This web-based application aims to give users an easy and convenient way to chec
 
 
 
+![image](https://github.com/user-attachments/assets/530f2d71-d7e0-41fb-a8dc-c4326372f945)
+
+
 ---------------- IN ORDER TO RUN ------------------
 
-To run, sinply type "node connect.js".
+Simply type "node connect.js" in the console to run the project.
 
 <!--Link to YouTube video: https://www.youtube.com/watch?v=BnLhYjRLWo8-->
