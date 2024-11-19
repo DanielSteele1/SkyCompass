@@ -18,13 +18,6 @@ This web-based application aims to give users an easy and convenient way to chec
 
 ---------------- IN ORDER TO RUN ------------------
 
-To run, make sure you have node JS installed onto your environment - use the command 'npm install -g npm' in the console.
-
-This project may also require the installation of: 
-- bcrypt
-- mongodb-js
-- express
-- express session
-- mongoose
+To run, sinply type "node connect.js".
 
 <!--Link to YouTube video: https://www.youtube.com/watch?v=BnLhYjRLWo8-->
