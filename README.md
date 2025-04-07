@@ -1,5 +1,5 @@
 # COMP3000 - SkyCompass 
-COMP3000 Final Project - This is my final year at the University of Plymouth.
+COMP3000 Final Project - This is my final year project at the University of Plymouth.
 
 This web-based application aims to give users an easy and convenient way to check the current weather, while also allowing them to visually see that data onto a user-friendly map. Weather maps include visualising Precipitation, Temperature, Cloud data, Wind speed & direction data etc. This web-app isn't just catered towards the average user, however. The application also displays more advanced data topics as well that the user can choose to enable. The web application also encompasses a more traditional layout for weather forecasting, which includes displaying current, hourly and weekly data for anywhere on the planet.
 
@@ -15,12 +15,6 @@ This web-based application aims to give users an easy and convenient way to chec
 ![](public/media/skycompass_search.gif)
 
 
-
 ![image](https://github.com/user-attachments/assets/530f2d71-d7e0-41fb-a8dc-c4326372f945)
-
-
----------------- IN ORDER TO RUN ------------------
-
-Simply type "node connect.js" in the console to run the project.
 
 <!--Link to YouTube video: https://www.youtube.com/watch?v=BnLhYjRLWo8-->
